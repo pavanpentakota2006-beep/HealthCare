@@ -30,8 +30,8 @@ export declare class GamificationController {
         badges: ({
             badge: {
                 id: string;
-                description: string;
                 name: string;
+                description: string;
                 iconUrl: string;
             };
         } & {
@@ -65,15 +65,15 @@ export declare class GamificationController {
     }>;
     getRewards(): Promise<{
         id: string;
-        description: string;
         name: string;
+        description: string;
         costCoins: number;
     }[]>;
     redeemReward(req: any, rewardId: string): Promise<{
         reward: {
             id: string;
-            description: string;
             name: string;
+            description: string;
             costCoins: number;
         };
     } & {

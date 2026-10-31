@@ -4,27 +4,27 @@ export declare class CommunityController {
     constructor(communityService: CommunityService);
     getPosts(): Promise<({
         user: {
-            id: string;
-            email: string;
             profile: {
                 firstName: string;
                 avatarUrl: string | null;
             } | null;
+            id: string;
+            email: string;
         };
         comments: ({
             user: {
-                id: string;
-                email: string;
                 profile: {
                     firstName: string;
                     avatarUrl: string | null;
                 } | null;
+                id: string;
+                email: string;
             };
         } & {
             id: string;
+            createdAt: Date;
             userId: string;
             content: string;
-            createdAt: Date;
             postId: string;
         })[];
         _count: {
@@ -33,40 +33,40 @@ export declare class CommunityController {
         };
     } & {
         id: string;
-        userId: string;
-        content: string;
-        imageUrl: string | null;
         createdAt: Date;
         updatedAt: Date;
+        imageUrl: string | null;
+        userId: string;
+        content: string;
     })[]>;
     createPost(req: any, content: string): Promise<{
         id: string;
-        userId: string;
-        content: string;
-        imageUrl: string | null;
         createdAt: Date;
         updatedAt: Date;
+        imageUrl: string | null;
+        userId: string;
+        content: string;
     }>;
     addComment(req: any, body: any): Promise<{
         id: string;
+        createdAt: Date;
         userId: string;
         content: string;
-        createdAt: Date;
         postId: string;
     }>;
     deleteComment(req: any, id: string): Promise<{
         id: string;
+        createdAt: Date;
         userId: string;
         content: string;
-        createdAt: Date;
         postId: string;
     }>;
     deletePost(req: any, id: string): Promise<{
         id: string;
-        userId: string;
-        content: string;
-        imageUrl: string | null;
         createdAt: Date;
         updatedAt: Date;
+        imageUrl: string | null;
+        userId: string;
+        content: string;
     }>;
 }

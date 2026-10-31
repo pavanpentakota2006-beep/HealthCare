@@ -10,49 +10,49 @@ export declare class CommerceController {
         };
     } & {
         id: string;
-        categoryId: string;
-        name: string;
-        description: string;
-        price: number;
-        stock: number;
-        imageUrl: string | null;
         createdAt: Date;
         updatedAt: Date;
+        name: string;
+        imageUrl: string | null;
+        description: string;
+        categoryId: string;
+        price: number;
+        stock: number;
     })[]>;
     getOrders(req: any): Promise<({
         items: ({
             product: {
                 id: string;
-                categoryId: string;
-                name: string;
-                description: string;
-                price: number;
-                stock: number;
-                imageUrl: string | null;
                 createdAt: Date;
                 updatedAt: Date;
+                name: string;
+                imageUrl: string | null;
+                description: string;
+                categoryId: string;
+                price: number;
+                stock: number;
             };
         } & {
             id: string;
-            orderId: string;
-            productId: string;
             quantity: number;
             priceAtBuy: number;
+            productId: string;
+            orderId: string;
         })[];
     } & {
         id: string;
         createdAt: Date;
         updatedAt: Date;
         userId: string;
-        totalAmount: number;
         status: string;
+        totalAmount: number;
     })[]>;
     createOrder(req: any, productId: string, quantity?: number): Promise<{
         id: string;
         createdAt: Date;
         updatedAt: Date;
         userId: string;
-        totalAmount: number;
         status: string;
+        totalAmount: number;
     }>;
 }
